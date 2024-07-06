@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  @apply leading-[normal] m-0;
+}
+*,
+::before,
+::after {
+  border-width: 0;
+}
+/* In your CSS file (e.g., App.css) */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  width: 400px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.close-button {
+  align-self: flex-end;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.referral-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+label {
+  margin-bottom: 15px;
+  width: 100%;
+  font-size: 16px;
+}
+
+.input-field {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.submit-button:hover {
+  background-color: #45a049;
+}
+
